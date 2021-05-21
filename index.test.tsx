@@ -50,4 +50,6 @@ test("should find the combobox role", async () => {
   expect(
     await screen.findByRole("combobox", { name: "Foo" })
   ).toBeInTheDocument();
+  // This is an alternative that also fails for the same reason:
+  expect(await screen.findByLabelText("Foo")).toBeInTheDocument();
 });
