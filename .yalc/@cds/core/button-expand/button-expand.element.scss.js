@@ -1,0 +1,2 @@
+import{css as a}from"lit";var i=a`:host{--animation-duration:var(--cds-global-animation-duration-secondary, 0.3s)}:host([action=vertical]) cds-icon{-webkit-transition:-webkit-transform var(--animation-duration);transition:transform var(--animation-duration);transition:transform var(--animation-duration),-webkit-transform var(--animation-duration)}cds-icon[shape=detail-collapse],cds-icon[shape=detail-expand]{width:var(--cds-global-space-8,1.125rem);height:var(--cds-global-space-8,1.125rem)}`;export default i;
+//# sourceMappingURL=button-expand.element.scss.js.map

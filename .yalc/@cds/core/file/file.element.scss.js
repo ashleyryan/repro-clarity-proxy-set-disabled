@@ -1,0 +1,2 @@
+import{css as t}from"lit";var o=t`:host{--control-width:calc(var(--cds-global-layout-space-xxxl, 4rem) * 3)}::slotted(input){display:none!important}:host([layout=compact]:not([control-width=shrink])) .input-container{min-width:initial}cds-button span{overflow:hidden;text-overflow:ellipsis;padding:var(--cds-global-space-4,.375rem) 0;max-width:var(--control-width)}`;export default o;
+//# sourceMappingURL=file.element.scss.js.map

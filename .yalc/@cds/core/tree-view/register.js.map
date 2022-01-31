@@ -1,0 +1,1 @@
+{"version":3,"file":"register.js","sources":["../../../src/tree-view/register.ts"],"sourcesContent":null,"names":["registerElementSafely","CdsTree","CdsTreeItem","ClarityMotion","add","AnimationTreeItemExpandName","AnimationTreeItemExpandConfig"],"mappings":"kbAYAA,EAAsB,WAAYC,GAClCD,EAAsB,gBAAiBE,GACvCC,EAAcC,IAAIC,EAA6BC"}

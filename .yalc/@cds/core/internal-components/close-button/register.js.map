@@ -1,0 +1,1 @@
+{"version":3,"file":"register.js","sources":["../../../../src/internal-components/close-button/register.ts"],"sourcesContent":null,"names":["registerElementSafely","CdsCloseButtonTagName","CdsInternalCloseButton","ClarityIcons","addIcons","timesIcon","addAliases"],"mappings":"qTAUAA,EAAsBC,EAAuBC,GAC7CC,EAAaC,SAASC,GACtBF,EAAaG,WAAW,CAAC,QAAS,CAAC"}

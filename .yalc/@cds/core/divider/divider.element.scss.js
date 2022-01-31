@@ -1,0 +1,2 @@
+import{css as t}from"lit";var i=t`:host{--color:var(--cds-alias-object-border-color, var(--cds-global-color-construction-200, #cbd4d8));--size:var(--cds-alias-object-border-width-100, 0.0625rem);--padding:0;display:block;width:100%;padding:var(--padding)}.private-host{height:var(--size);background:var(--color)}:host([orientation=vertical]){-ms-flex-item-align:stretch;align-self:stretch;height:inherit;width:var(--size)}:host([orientation*=vertical]) .private-host{height:100%;width:var(--size)}`;export default i;
+//# sourceMappingURL=divider.element.scss.js.map

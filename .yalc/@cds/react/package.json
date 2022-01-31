@@ -1,0 +1,30 @@
+{
+  "name": "@cds/react",
+  "version": "6.0.0-next.3+a93b093a",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vmware/clarity.git"
+  },
+  "dependencies": {
+    "@lit-labs/react": "^1.0.1"
+  },
+  "peerDependencies": {
+    "@cds/core": "./dist/core",
+    "react": ">= 16.13.1",
+    "react-dom": ">= 16.13.1"
+  },
+  "optionalDependencies": {
+    "@cds/city": "^1.1.0",
+    "modern-normalize": "^1.1.0"
+  },
+  "author": "clarity",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vmware/clarity/issues"
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module",
+  "yalcSig": "a93b093aaffcc8f52c2309c56d8d7d91"
+}

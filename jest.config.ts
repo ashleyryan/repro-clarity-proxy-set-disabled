@@ -8,6 +8,8 @@ const jestConfig: InitialOptionsTsJest = {
   transformIgnorePatterns: [
     "<rootDir>/node_modules/(?!@cds/core|@cds/react|lit|@lit|lit-element|lit-html|ramda)",
   ],
+
+  testMatch: ["**/test.test.tsx"]
 };
 
 export default jestConfig;

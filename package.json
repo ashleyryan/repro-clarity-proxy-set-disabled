@@ -1,17 +1,18 @@
 {
   "private": true,
   "scripts": {
-    "test": "jest ./index.test.tsx"
+    "test": "jest"
   },
   "dependencies": {
-    "@cds/core": "5.6.2",
-    "@cds/react": "5.6.2",
+    "@cds/core": "file:.yalc/@cds/core",
+    "@cds/react": "file:.yalc/@cds/react",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.14.3",
     "@babel/preset-env": "7.14.2",
+    "@testing-library/dom": "8.11.3",
     "@testing-library/jest-dom": "5.12.0",
     "@testing-library/react": "11.2.7",
     "@testing-library/user-event": "13.5.0",

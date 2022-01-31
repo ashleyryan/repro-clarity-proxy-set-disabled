@@ -1,0 +1,1 @@
+{"version":3,"file":"register.js","sources":["../../../../src/internal-components/popup/register.ts"],"sourcesContent":null,"names":["ClarityMotion","add","AnimationResponsivePopupEnterName","AnimationResponsivePopupEnterConfig","registerElementSafely","CdsInternalPopup","CdsInternalPointer"],"mappings":"6UASAA,EAAcC,IAAIC,EAAmCC,GACrDC,EAAsB,qBAAsBC,GAC5CD,EAAsB,uBAAwBE"}
