@@ -6,7 +6,7 @@ const jestConfig: InitialOptionsTsJest = {
   preset: "ts-jest/presets/js-with-babel",
 
   transformIgnorePatterns: [
-    "<rootDir>/node_modules/(?!@cds/core|@cds/react|lit-element|lit-html|ramda)",
+    "<rootDir>/node_modules/(?!@cds/core|@cds/react|lit|@lit|lit-element|lit-html|ramda)",
   ],
 };
 

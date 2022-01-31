@@ -1,5 +1,7 @@
 import { CdsSelect } from "@cds/react/select";
+import { CdsButton } from "@cds/react/button";
 import { render, screen } from "@testing-library/react";
+import userEvent from '@testing-library/user-event';
 import React from "react";
 
 /**
@@ -18,12 +20,18 @@ window.ResizeObserver = class ResizeObserver {
   disconnect() {}
 };
 
+test("should find the button", async () => {
+  render(<CdsButton>My Button</CdsButton>);
+
+  expect(await screen.findByRole('button')).toBeInTheDocument();
+})
+
 test("should find the combobox role", async () => {
   render(
     <CdsSelect>
       <label>Foo</label>
-      <select>
-        <option>Bar</option>
+      <select disabled>
+        <option value="1">Bar</option>
       </select>
     </CdsSelect>
   );
@@ -47,9 +55,45 @@ test("should find the combobox role", async () => {
    * When commenting out https://github.com/vmware/clarity/blob/next/packages/core/src/forms/control/control.element.ts#L291
    * the test succeeds as expected.
    */
-  expect(
-    await screen.findByRole("combobox", { name: "Foo" })
-  ).toBeInTheDocument();
-  // This is an alternative that also fails for the same reason:
+
+  const select =   await screen.findByRole("combobox", { name: "Foo" });
+  expect(select).toBeInTheDocument();
+
   expect(await screen.findByLabelText("Foo")).toBeInTheDocument();
+
+  expect(select).toBeDisabled();
+
+  userEvent.selectOptions(select, "1");
+
+  expect((screen.getByRole('option', {name: 'Bar'}) as HTMLOptionElement).selected).toBe(true)
+
+});
+
+test("track disabled state", async () => {
+  const TestComponent = () => {
+    const [disabled, setDisabled] = React.useState(false);
+
+    return (
+      <>
+        <button onClick={() => {setDisabled((s) => !s)}}>Set disabled</button>
+        <CdsSelect>
+          <label>Foo</label>
+          <select disabled={disabled}>
+            <option value="1">Bar</option>
+          </select>
+        </CdsSelect>
+      </>
+    )
+  };
+
+  render(<TestComponent />);
+
+  expect( await screen.findByRole("combobox")).not.toBeDisabled();
+
+  userEvent.click(await screen.findByRole('button'));
+
+  expect( await screen.findByRole("combobox")).toBeDisabled();
+  expect( await screen.findByRole("option")).toBeDisabled();
+
+  screen.debug();
 });
