@@ -1,1 +1,0 @@
-{"version":3,"file":"register.js","sources":["../../../src/date/register.ts"],"sourcesContent":null,"names":["ClarityIcons","addIcons","calendarIcon","registerElementSafely","CdsDate"],"mappings":"yVAYAA,EAAaC,SAASC,GACtBC,EAAsB,WAAYC"}

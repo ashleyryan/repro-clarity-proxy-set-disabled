@@ -9,7 +9,9 @@ const jestConfig: InitialOptionsTsJest = {
     "<rootDir>/node_modules/(?!@cds/core|@cds/react|lit|@lit|lit-element|lit-html|ramda)",
   ],
 
-  testMatch: ["**/test.test.tsx"]
+  testMatch: ["**/test.test.tsx"],
+
+  testEnvironment: "jsdom"
 };
 
 export default jestConfig;

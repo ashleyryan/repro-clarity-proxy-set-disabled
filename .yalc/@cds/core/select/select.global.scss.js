@@ -1,2 +1,0 @@
-import{css as o}from"lit";var a=o`cds-select option{background:var(--cds-alias-object-container-background,var(--cds-global-color-white,#fff));color:var(--cds-global-typography-color-400,var(--cds-global-color-construction-900,#21333b));padding:var(--cds-global-space-4,.375rem);font-size:var(--cds-global-typography-font-size-3,.8125rem)}cds-select input::-webkit-calendar-picker-indicator{display:none}`;export default a;
-//# sourceMappingURL=select.global.scss.js.map

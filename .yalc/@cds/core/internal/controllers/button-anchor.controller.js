@@ -1,2 +1,0 @@
-function t(){return t=>t.addInitializer((t=>new e(t)))}class e{constructor(t){this.host=t,this.host.addController(this)}hostUpdated(){var t;const e="A"===(null===(t=this.host.parentElement)||void 0===t?void 0:t.tagName);e&&this.host.parentElement&&(this.host.readonly=e,this.host.parentElement.style.lineHeight="0",this.host.parentElement.style.textDecoration="none")}}export{e as ButtonAnchorController,t as buttonAnchor};
-//# sourceMappingURL=button-anchor.controller.js.map

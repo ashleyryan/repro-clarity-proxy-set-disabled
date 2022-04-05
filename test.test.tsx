@@ -1,4 +1,6 @@
 import { CdsSelect } from "@cds/react/select";
+import { CdsAlert, CdsAlertActions, CdsAlertGroup } from '@cds/react/alert';
+import { CdsAccordion, CdsAccordionContent, CdsAccordionHeader, CdsAccordionPanel } from '@cds/react/accordion';
 import { CdsButton } from "@cds/react/button";
 import { render, screen } from "@testing-library/react";
 import userEvent from '@testing-library/user-event';
@@ -14,10 +16,10 @@ import React from "react";
  *   ...
  * ```
  */
-window.ResizeObserver = class ResizeObserver {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
+global.ResizeObserver = class ResizeObserver {
+  observe() { }
+  unobserve() { }
+  disconnect() { }
 };
 
 test("should find the button", async () => {
@@ -56,7 +58,7 @@ test("should find the combobox role", async () => {
    * the test succeeds as expected.
    */
 
-  const select =   await screen.findByRole("combobox", { name: "Foo" });
+  const select = await screen.findByRole("combobox", { name: "Foo" });
   expect(select).toBeInTheDocument();
 
   expect(await screen.findByLabelText("Foo")).toBeInTheDocument();
@@ -65,8 +67,20 @@ test("should find the combobox role", async () => {
 
   userEvent.selectOptions(select, "1");
 
-  expect((screen.getByRole('option', {name: 'Bar'}) as HTMLOptionElement).selected).toBe(true)
+  expect((screen.getByRole('option', { name: 'Bar' }) as HTMLOptionElement).selected).toBe(true)
 
+});
+
+it('snapshot with nested web components', () => {
+  const { container } = render(
+    <CdsAccordion>
+      <CdsAccordionPanel expanded>
+        <CdsAccordionHeader id="my-header">Item 1</CdsAccordionHeader>
+        <CdsAccordionContent id="my-content">Content 1</CdsAccordionContent>
+      </CdsAccordionPanel>
+    </CdsAccordion>
+  );
+  expect(container).toMatchSnapshot();
 });
 
 test("track disabled state", async () => {
@@ -75,7 +89,7 @@ test("track disabled state", async () => {
 
     return (
       <>
-        <button onClick={() => {setDisabled((s) => !s)}}>Set disabled</button>
+        <button onClick={() => { setDisabled((s) => !s) }}>Set disabled</button>
         <CdsSelect>
           <label>Foo</label>
           <select disabled={disabled}>
@@ -88,11 +102,11 @@ test("track disabled state", async () => {
 
   render(<TestComponent />);
 
-  expect( await screen.findByRole("combobox")).not.toBeDisabled();
+  expect(await screen.findByRole("combobox")).not.toBeDisabled();
 
   userEvent.click(await screen.findByRole('button'));
 
-  expect( await screen.findByRole("combobox")).toBeDisabled();
-  expect( await screen.findByRole("option")).toBeDisabled();
+  expect(await screen.findByRole("combobox")).toBeDisabled();
+  expect(await screen.findByRole("option")).toBeDisabled();
 
 });

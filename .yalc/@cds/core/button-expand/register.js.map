@@ -1,1 +1,0 @@
-{"version":3,"file":"register.js","sources":["../../../src/button-expand/register.ts"],"sourcesContent":null,"names":["ClarityIcons","addIcons","angleIcon","detailExpandIcon","detailCollapseIcon","registerElementSafely","CdsButtonExpand"],"mappings":"4aAYAA,EAAaC,SAASC,EAAWC,EAAkBC,GACnDC,EAAsB,oBAAqBC"}

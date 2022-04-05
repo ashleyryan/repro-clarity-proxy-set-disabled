@@ -1,2 +1,0 @@
-import{__decorate as t}from"tslib";import{assignSlotNames as o,property as r}from"@cds/core/internal";import{CdsButtonAction as e}from"@cds/core/button-action";class i extends e{updated(t){var r;super.updated(t),o([this,null!==(r=this.action)&&void 0!==r&&r])}}t([r({type:String,reflect:!0})],i.prototype,"action",void 0);export{i as CdsControlAction};
-//# sourceMappingURL=control-action.element.js.map

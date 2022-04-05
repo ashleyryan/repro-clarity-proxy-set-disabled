@@ -1,1 +1,0 @@
-{"version":3,"file":"register.js","sources":["../../../src/button-sort/register.ts"],"sourcesContent":null,"names":["ClarityIcons","addIcons","angleIcon","registerElementSafely","CdsButtonSort"],"mappings":"gRAUAA,EAAaC,SAASC,GACtBC,EAAsB,kBAAmBC"}

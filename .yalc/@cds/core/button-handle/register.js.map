@@ -1,1 +1,0 @@
-{"version":3,"file":"register.js","sources":["../../../src/button-handle/register.ts"],"sourcesContent":null,"names":["ClarityIcons","addIcons","dragHandleIcon","registerElementSafely","CdsButtonHandle"],"mappings":"+RAUAA,EAAaC,SAASC,GACtBC,EAAsB,oBAAqBC"}
